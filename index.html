@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> Pizza Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="pizza.css">
+    <script src="pizza.js"></script>
+</head>
+<body style="background-color: rgb(27, 25, 25);">
+    <div>
+        <img id="guy" src="order_up.jpg" alt="ICON" title="Icon" style="margin-left: 10%; margin-right: 20%; margin-top: 2%;height: 150px;width: 150px;">
+        <img id="logo" src="logo.jpg" alt="LOGO" title="LOGO" style="margin-top: 2%; margin-right: 20%;height: 150px;width: 150px;">
+        <img id="sign" src="just_open.jpg" alt="Just_Opened" title="Just_Opened" style="margin-right: 10%;margin-top: 2%;height: 150px;width: 225px;">
+    </div>
+    <div style="background-color: white; border: 3px solid rgb(190,0,0);">
+        <nav id="header" style="font-size: 2vw;position: relative;top: 25%;width: 100%;left: 20%;">
+            <a href="#/home" onclick="showPageSection('home')" class="menuItems">HOME</a>
+            <a href="#/about-us" onclick="showPageSection('about-us')" class="menuItems">ABOUT-US</a>
+            <a href="#/menu" onclick="showPageSection('menu')" class="menuItems">MENU</a>
+            <a href="#/contact-us" onclick="showPageSection('contact-us')" class="menuItems">CONTACT US</a>
+        </nav>
+    </div>
+    <div id="home">
+        <div class="position-relative" style="top: 200px;">
+            <div id="carousel-id" class="carousel slide" data-ride="carousel">
+                <div class="carousel-item active">
+                    <img src="great_food.jpg" style="height: 500px;width: 90%;" alt="1" class="mx-auto d-block img-thumbnail">
+                </div>
+                <div class="carousel-item">
+                    <img src="new_location.jpg" style="height: 500px;width: 90%;" alt="2" class="mx-auto d-block img-thumbnail">
+                </div>
+                <div class="carousel-item">
+                    <img src="free_slice.jpg" style="height: 500px;width: 90%;" alt="3" class="mx-auto d-block img-thumbnail">
+                </div>
+                <a class="carousel-control-prev" href="#carousel-id" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-id" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="about-us" style="visibility: hidden; font-size: 2vw; top: 400px; position: absolute;">
+        <h1 style="left: 80%; position: relative; color: white;">About</h1>
+        <div class="row">
+            <div style="top: 50px; left: 40%; position: relative; color: white;">
+                <img src="pizza.jpeg" alt="about us" style="top: 50px; left: 100px; float: right;position: relative; height: 300px; width: 300px;">
+                <p>Why should you come here?</p>
+                <ul class="aboutList">
+                    <li class="aboutListElement">Great Deals</li>
+                    <li class="aboutListElement">Delicious Food</li>
+                    <li class="aboutListElement">Fast Service</li>
+                </ul>
+                <p id="descriptionText" style="top: 80px; left: 100px; position: relative; color: white; clear: both;">
+                We are a pizzaria that serves great food at an excelent price.</p>
+            </div>
+        </div>
+    </div>
+    <div id="menu" style="visibility: hidden; top: 400px; left: 8%; position: absolute; width: 82%; height: 20%;">
+        <h1 style="text-align: center; width: 100%; color: white;">Menu</h1>
+        <div class="card text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="extra_cheese.jpeg" alt="Extra Cheese" style="left: 20px; width: 150px; height: 150px;">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body">
+                            <h2 id="cheese" class="card-title"> Extra Cheese </h2>
+                            <h4 class="card-text">Regular slice with extra cheese</h4>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="cheeseprice" href="#" onclick="priceButton('cheese', 'cheeseprice')"
+                        class="btn btn-primary">50 Rs </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="card text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="pepperoni_toppings.jpg" alt="Extra Pepperoni Toppings" style="width: 150px; height: 150px;">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body">
+                            <h2 id="pepperoni_toppings" class="card-title"> Extra Pepperoni Toppings </h2>
+                            <h4 class="card-text">Regular slice with extra pepperoni toppings</h4>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="pepperoni_toppings_price" href="#" onclick="priceButton('pepperoni_toppings', 'pepperoni_toppings_price')"
+                        class="btn btn-primary">44.99 Rs </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="card text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="extra_mushroom.jpg" alt="Extra Mushroom" style="width: 150px; height: 150px;">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body">
+                            <h2 id="mushroom" class="card-title"> Extra Mushroom </h2>
+                            <h4 class="card-text">Regular slice with extra Mushroom</h4>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="mushroomprice" href="#" onclick="priceButton('mushroom', 'mushroomprice')"
+                        class="btn btn-primary">49.99 Rs </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="card text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="extra_chicket.jpg" alt="Extra Chicken" style="width: 150px; height: 150px;">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body">
+                            <h2 id="chicken" class="card-title"> Extra Chicken </h2>
+                            <h4 class="card-text">Regular slice with extra Chicken</h4>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="chickenprice" href="#" onclick="priceButton('chicken', 'chickenprice')"
+                        class="btn btn-primary">55.48 Rs </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="card text-center">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="card-img-top" src="golden_corn.jpg" alt="Extra Golden Corn" style="width: 150px; height: 150px;">
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card-body">
+                            <h2 id="golden_corn" class="card-title"> Extra Golden Corn </h2>
+                            <h4 class="card-text">Regular slice with extra golden corn</h4>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <a id="goldencornprice" href="#" onclick="priceButton('golden_corn', 'goldencornprice')"
+                        class="btn btn-primary">54.48 Rs </a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div id="contact-us" style="position: absolute; top: 400px; visibility: hidden; left:20%">
+        <h1 style="width: 100%; text-align: center; color: white;">Contact</h1>
+        <div style="width: 800px; clear: both;">
+            <form action="javascript:displyAlert()" method="post">
+                <ul style="list-style-type: none;">
+                    <li style="color: white;">Email: <input type="email" id="email" class="formInputField"></li>
+                    <li>&nbsp;</li>
+                    <li style="color: white;">Subject: <input type="text" id="subject" class="formInputField"></li>
+                    <li>&nbsp;</li>
+                    <li style="color: white;">Body: <textarea rows="5" cols="50" id="body" class="formInputField"></textarea></li>
+                    <li>&nbsp;</li>
+                    <li><input id="submitButton" type="submit" name="Submit" value="Submit"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
